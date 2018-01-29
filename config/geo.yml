@@ -1,0 +1,6 @@
+development:
+  driver: postgres
+  openStr: user=timezones_user password=pass dbname=timezones_db sslmode=disable
+  table: timezones_db
+  latCol: lat
+  lngCol: lng
