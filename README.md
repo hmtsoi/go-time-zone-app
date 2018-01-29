@@ -12,9 +12,9 @@ in database "timezones_db" and a user "timezones_user" having access to it with 
 
 # To view:
 Open a browser and type in
-"http://127.0.0.1:8080/timeForLatLon/{latutude},{longitude}"
+"http://127.0.0.1:8000/timeForLatLon/{latutude},{longitude}"
 e.g.
-"http://127.0.0.1:8080/timeForLatLon/-22,-43.17" (Rio de Janeiro),
-"http://127.0.0.1:8080/timeForLatLon/22.39,114.11" (Hong Kong),
-"http://127.0.0.1:8080/timeForLatLon/53.55,9.99" (Hamburg)
+"http://127.0.0.1:8000/timeForLatLon/-22,-43.17" (Rio de Janeiro),
+"http://127.0.0.1:8000/timeForLatLon/22.39,114.11" (Hong Kong),
+"http://127.0.0.1:8000/timeForLatLon/53.55,9.99" (Hamburg)
 for the time zone information.
