@@ -1,14 +1,15 @@
 package rest
 
 import (
+	"encoding/json"
+	"errors"
 	"log"
 	"net/http"
-	"strings"
-	"errors"
 	"strconv"
-	"encoding/json"
-	"thmlogwork.com/go-time-zone-app/domain"
+	"strings"
+
 	"github.com/gorilla/mux"
+	"thmlogwork.com/go-time-zone-app/domain"
 )
 
 type TimezoneController struct {
@@ -37,7 +38,8 @@ func (controller TimezoneController) GetTimezone(writer http.ResponseWriter, req
 	}
 
 	log.Printf("Getting info for (Latitude, Longitude): (%v, %v)\n", latLon.Latitude, latLon.Longitude)
-	response := controller.TimezoneService.GetTimezoneInfo(latLon)
+	info := controller.TimezoneService.GetTimezoneInfo(latLon)
+	response := controller.TimezoneService.MapTimezoneInfo(info)
 	json.NewEncoder(writer).Encode(response)
 }
 
